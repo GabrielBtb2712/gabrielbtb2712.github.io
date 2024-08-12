@@ -102,7 +102,7 @@ analytics:
 # Site Author
 author:
   name             : "Arc4he"
-  avatar           : "/assets/images/avatar.png"
+  avatar           : "/assets/images/avatar-3.png"
   bio              : "Pentester, CTF player<br>HackTheBox ATeam"
   location         : "Doxed"
   email            : "arc4.he@gmail.com"
