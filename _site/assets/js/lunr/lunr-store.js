@@ -8,4 +8,9 @@ var store = [{
         "excerpt":"The Presidential Elections within the USA are just around the corner (November 2020). One of the political parties is concerned that the other political party is going to perform electoral fraud by hacking into the registration system, and falsifying the votes. The state of Ontario has therefore asked you (an...","categories": ["vulnhub","infosec"],
         "tags": ["hashcat","phpmyadmin","ssh","mysql","capabilities"],
         "url": "http://localhost:4000/vulnhub-Presidential/",
-        "teaser":"http://localhost:4000/assets/images/2024-08-14-vulnhub-Presidential/web_interface.png"}]
+        "teaser":"http://localhost:4000/assets/images/2024-08-14-vulnhub-Presidential/web_interface.png"},{
+        "title": "Infovore - VulnHub",
+        "excerpt":"Hack The Machine This is an easy to intermediate box that shows you how you can exploit innocent looking php functions and lazy sys admins. There are 4 flags in total to be found, and you will have to think outside the box and try alternative ways to achieve your...","categories": ["vulnhub","web vulnerabilities","scripting","containers","cracking"],
+        "tags": ["john the ripper","ssh","phpinfo","abusing","RCE","LFI","docker breakout","pyhthon"],
+        "url": "http://localhost:4000/vulnhub-infovore/",
+        "teaser":"http://localhost:4000/assets/images/2024-08-15-vulnhub-infovore/interface_web.png"}]
