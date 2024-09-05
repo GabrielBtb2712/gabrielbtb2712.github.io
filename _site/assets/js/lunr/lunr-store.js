@@ -13,4 +13,9 @@ var store = [{
         "excerpt":"Hack The Machine This is an easy to intermediate box that shows you how you can exploit innocent looking php functions and lazy sys admins. There are 4 flags in total to be found, and you will have to think outside the box and try alternative ways to achieve your...","categories": ["vulnhub","web vulnerabilities","scripting","containers","cracking"],
         "tags": ["john the ripper","ssh","phpinfo","abusing","RCE","LFI","docker breakout","pyhthon"],
         "url": "http://localhost:4000/vulnhub-infovore/",
-        "teaser":"http://localhost:4000/assets/images/2024-08-15-vulnhub-infovore/interface_web.png"}]
+        "teaser":"http://localhost:4000/assets/images/2024-08-15-vulnhub-infovore/interface_web.png"},{
+        "title": "eCPPTv2 Simulation",
+        "excerpt":"This time we will perform a simulation of the eCPPTv2 exam, in which we will have to compromise an entire network of computers using Pivoting, all in a local environment using VMware. Machines links: Aragog Nagini Fawkes Matrix 1 Brainpan We start with the configuration: Network Configuration =&gt; Vmware &gt;...","categories": ["vulnhub","Certification","Pivoting","eCPPTv2"],
+        "tags": ["john","WordPress","wpscan","scripting","Vmware","Buffer Over Flow","mysql","SSRF","BurpSuite","Privilege Escalation","Python3"],
+        "url": "http://localhost:4000/eCPPTv2-simulation/",
+        "teaser":"http://localhost:4000/assets/images/2024-08-17-eCPPTv2-simulation/certificate-eCPPTv2.png"}]
