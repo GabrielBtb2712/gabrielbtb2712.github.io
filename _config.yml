@@ -16,14 +16,14 @@ minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", 
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Arc4he.io"
+title                    : "KR4V3N.io"
 title_separator          : "-"
-name                     : "Arc4he"
+name                     : "kr4v3n"
 description              : "Posts about security, CTFs and networking"
 url                      : # "https://snowscan.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "Arc4he/arc4he.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-logo                     : "/assets/images/letters-3.png"
+repository               : "GabrielBtb2712/gabrielbtb2712.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+#logo                     : "/assets/images/letters-3.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -101,11 +101,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Arc4he"
-  avatar           : "/assets/images/avatar-3.png"
-  bio              : "- Aspiring Security Analyst<br>- CTF Player"
-  location         : "Doxed"
-  email            : "arc4.he@gmail.com"
+  name             : "Kr4v3n"
+  avatar           : "/assets/images/dragon.png"
+  bio              : "- Pentester "
+  location         : "Mexico"
+  email            : "gabriel2712bocanegrat@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -114,7 +114,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "Arc4he"
+  github           : "GabrielBtb2712"
   gitlab           :
   google_plus      :
   keybase          : # "arc4he"
