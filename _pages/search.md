@@ -14,14 +14,12 @@ permalink: /search/
     padding: 20px;
   }
 
-  /* Contenedor principal */
   .search-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
 
-  /* Formulario de búsqueda */
   #search-form {
     display: flex;
     flex-direction: column;
@@ -31,8 +29,8 @@ permalink: /search/
   }
 
   #search-box {
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 18px;
     border: 2px solid #444;
     border-radius: 5px;
     width: 100%;
@@ -49,8 +47,8 @@ permalink: /search/
   }
 
   #search-form input[type="submit"] {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 20px;
+    font-size: 18px;
     background-color: rgb(59, 180, 144);
     color: #ffffff;
     border: none;
@@ -58,23 +56,22 @@ permalink: /search/
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
-    max-width: 150px;
+    max-width: 180px;
   }
 
   #search-form input[type="submit"]:hover {
     background-color: rgb(45, 140, 110);
   }
 
-  /* Resultados de búsqueda */
   #search-results {
     width: 100%;
   }
 
   .result-item {
     background-color: #2d2d2d;
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
   }
 
@@ -85,35 +82,43 @@ permalink: /search/
   .result-item h3 {
     margin: 0;
     color: rgb(59, 180, 144);
+    font-size: 20px;
   }
 
   .result-item p {
     margin: 10px 0 0;
     color: #cccccc;
+    font-size: 16px;
   }
 
-  /* Mensaje de carga */
   .loading {
     display: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(59, 180, 144);
     margin-top: 20px;
   }
 
   /* Estilos responsivos */
-  @media (min-width: 600px) {
+  @media (max-width: 600px) {
     #search-form {
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
+      align-items: stretch;
     }
 
     #search-box {
-      width: 300px;
+      font-size: 16px;
+      padding: 10px;
     }
 
     #search-form input[type="submit"] {
-      width: auto;
+      font-size: 16px;
+      padding: 10px;
+      max-width: 100%;
+    }
+
+    .result-item {
+      padding: 15px;
     }
   }
 </style>
@@ -125,7 +130,6 @@ permalink: /search/
   </form>
 
   <div class="loading" id="loading">Buscando...</div>
-
   <div id="search-results"></div>
 </div>
 
@@ -134,14 +138,12 @@ permalink: /search/
   let idx;
   let searchData = {};
 
-  // Cargar el índice de búsqueda
   fetch('/search-index.json')
     .then(response => response.json())
     .then(data => {
-      // Crear el índice de Lunr
       idx = lunr(function () {
         this.ref('id');
-        this.field('title', { boost: 10 }); // Prioriza el título
+        this.field('title', { boost: 10 });
         this.field('content');
         this.field('tags');
         this.field('categories');
@@ -152,14 +154,12 @@ permalink: /search/
           searchData[id] = doc;
         });
       });
-
       console.log('Índice cargado correctamente:', idx);
     })
     .catch(error => {
       console.error('Error cargando el índice:', error);
     });
 
-  // Manejar el formulario de búsqueda
   document.getElementById('search-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const query = document.getElementById('search-box').value.trim();
@@ -171,15 +171,11 @@ permalink: /search/
       return;
     }
 
-    // Mostrar el mensaje de carga
     loading.style.display = 'block';
     resultsContainer.innerHTML = '';
 
-    // Simular un retraso para la búsqueda (opcional)
     setTimeout(() => {
       const results = idx.search(query);
-
-      // Ocultar el mensaje de carga
       loading.style.display = 'none';
 
       if (results.length > 0) {
@@ -189,12 +185,11 @@ permalink: /search/
             <div class="result-item">
               <h3><a href="${doc.url}">${doc.title}</a></h3>
               <p>${doc.content.substring(0, 150)}...</p>
-            </div>
-          `;
+            </div>`;
         }).join('');
       } else {
         resultsContainer.innerHTML = '<p>No se encontraron resultados.</p>';
       }
-    }, 500); // Retraso simulado de 500ms
+    }, 500);
   });
 </script>
